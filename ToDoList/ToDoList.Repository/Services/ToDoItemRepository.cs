@@ -1,4 +1,5 @@
-﻿using System.Net.Mail;
+﻿using Microsoft.EntityFrameworkCore;
+using System.Net.Mail;
 using ToDoList.DataAccess;
 using ToDoList.DataAccess.Entities;
 
@@ -20,9 +21,15 @@ public class ToDoItemRepository : IToDoItemRepository
         return toDoItem.Id;
     }
 
-    public Task DeleteToDoItemByIdAsync(long Id)
+    public async Task DeleteToDoItemByIdAsync(long Id)
     {
-        throw new NotImplementedException();
+        var deleteItem = await SelectToDoItemByIdAsync(Id);
+        if (deleteItem == null)
+        {
+            throw new Exception("deleted item not found");
+        }
+        MainContext.ToDoItems.Remove(deleteItem);
+        await MainContext.SaveChangesAsync();
     }
 
     public Task<List<ToDoItem>> SelectAllToDoItemsAsync(int skip, int take)
@@ -45,9 +52,14 @@ public class ToDoItemRepository : IToDoItemRepository
         throw new NotImplementedException();
     }
 
-    public Task<ToDoItem> SelectToDoItemByIdAsync(long Id)
+    public async Task<ToDoItem> SelectToDoItemByIdAsync(long Id)
     {
-        throw new NotImplementedException();
+        var item = await MainContext.ToDoItems.FirstOrDefaultAsync(x => x.Id == Id);
+        if (item == null)
+        {
+            throw new Exception("not found");
+        }
+        return item;
     }
 
     public Task UpdateToDoItemAsync(ToDoItem toDoItem)
