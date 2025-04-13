@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ToDoList.DataAccess
 {
-    class MainContext
+    public class MainContext : DbContext
     {
     }
 }
