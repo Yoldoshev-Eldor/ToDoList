@@ -1,12 +1,23 @@
-﻿using ToDoList.DataAccess.Entities;
+﻿using System.Net.Mail;
+using ToDoList.DataAccess;
+using ToDoList.DataAccess.Entities;
 
 namespace ToDoList.Repository.Services;
 
 public class ToDoItemRepository : IToDoItemRepository
 {
-    public Task AddToDoItemAsync(ToDoItem toDoItem)
+    private readonly MainContext MainContext;
+
+    public ToDoItemRepository(MainContext mainContext)
     {
-        throw new NotImplementedException();
+        MainContext = mainContext;
+    }
+
+    public async Task<long> AddToDoItemAsync(ToDoItem toDoItem)
+    {
+        await MainContext.ToDoItems.AddAsync(toDoItem);
+        await MainContext.SaveChangesAsync();
+        return toDoItem.Id;
     }
 
     public Task DeleteToDoItemByIdAsync(long Id)

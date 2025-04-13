@@ -5,7 +5,7 @@ namespace ToDoList.Service.Services;
 
 public interface IToDoItemService
 {
-    Task AddToDoItemAsync(ToDoItemCreateDto toDoItem);
+    Task<long> AddToDoItemAsync(ToDoItemCreateDto toDoItemtoDoItemDto);
     Task DeleteToDoItemByIdAsync(long Id);
     Task UpdateToDoItemAsync(ToDoItemUpdateDto toDoItem);
     Task<List<ToDoItemGetDto>> SelectAllToDoItemsAsync(int skip, int take);

@@ -3,7 +3,7 @@ namespace ToDoList.Repository.Services;
 
 public interface IToDoItemRepository
 {
-    Task AddToDoItemAsync (ToDoItem toDoItem);
+    Task<long> AddToDoItemAsync(ToDoItem toDoItem);
     Task DeleteToDoItemByIdAsync(long Id);
     Task UpdateToDoItemAsync(ToDoItem toDoItem);
     Task<List<ToDoItem>> SelectAllToDoItemsAsync(int skip, int take);
@@ -11,8 +11,4 @@ public interface IToDoItemRepository
     Task<List<ToDoItem>> SelectByDueDateAsync(DateTime dateTime);
     Task<List<ToDoItem>> SelectCompletedAsync(int skip, int take);
     Task<List<ToDoItem>> SelectIncompletedAsync(int skip, int take);
-
-
-
-
 }
