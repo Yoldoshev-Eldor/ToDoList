@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace ToDoList.Service.DTOs;
 
-namespace ToDoList.Service.DTOs
+public class ToDoItemCreateDto
 {
-    internal class ToDoItemCreateDto
-    {
-    }
+    public string Title { get; set; }
+    public string Description { get; set; }
+    public DateTime DueDate { get; set; }
 }
