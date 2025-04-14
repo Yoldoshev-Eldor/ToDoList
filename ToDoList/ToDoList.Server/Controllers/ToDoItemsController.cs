@@ -15,8 +15,17 @@ public class ToDoItemsController : ControllerBase
         ToDoItemService = toDoItemService;
     }
     [HttpPost("add")]
-    private async Task AddTask(ToDoItemCreateDto toDoItemCreateDto)
+    public async Task AddTask(ToDoItemCreateDto toDoItemCreateDto)
     {
         await ToDoItemService.AddToDoItemAsync(toDoItemCreateDto);
+    }
+    [HttpDelete("delete")]
+    public async Task DeleteItem(long id)
+    {
+        await ToDoItemService.DeleteToDoItemByIdAsync(id);
+    }
+    public async Task<ToDoItemGetDto>GetById(long id)
+    {
+        return await ToDoItemService.SelectToDoItemByIdAsync(id);
     }
 }

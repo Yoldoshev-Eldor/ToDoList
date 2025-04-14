@@ -39,9 +39,13 @@ public class ToDoItemService : IToDoItemService
         };
     }
 
-    public Task DeleteToDoItemByIdAsync(long Id)
+    public async Task DeleteToDoItemByIdAsync(long Id)
     {
-        throw new NotImplementedException();
+        var toDoItem = await ToDoItemRepository.SelectToDoItemByIdAsync(Id);
+        if (toDoItem == null)
+            throw new Exception($"ToDoItem with ID {Id} not found.");
+
+        await ToDoItemRepository.DeleteToDoItemByIdAsync(Id);
     }
 
     public Task<List<ToDoItemGetDto>> SelectAllToDoItemsAsync(int skip, int take)
@@ -64,9 +68,24 @@ public class ToDoItemService : IToDoItemService
         throw new NotImplementedException();
     }
 
-    public Task<ToDoItemGetDto> SelectToDoItemByIdAsync(long Id)
+    public async Task<ToDoItemGetDto> SelectToDoItemByIdAsync(long Id)
     {
-        throw new NotImplementedException();
+        var toDoItem = await ToDoItemRepository.SelectToDoItemByIdAsync(Id);
+        return ConvertToDoItemGetDto(toDoItem);
+    }
+
+    public ToDoItemGetDto ConvertToDoItemGetDto(ToDoItem toDoItem)
+    {
+        return new ToDoItemGetDto()
+        {
+            Id = toDoItem.Id,
+            Title = toDoItem.Title,
+            Description = toDoItem.Description,
+            IsCompleted = toDoItem.IsCompleted,
+            DueDate = toDoItem.DueDate,
+            CreatedAt = toDoItem.CreatedAt
+
+        };
     }
 
     public Task UpdateToDoItemAsync(ToDoItemUpdateDto toDoItem)
