@@ -10,7 +10,7 @@ using ToDoList.DataAccess;
 
 namespace ToDoList.DataAccess.Migrations
 {
-    [DbContext(typeof(MainContext))]
+    [DbContext(typeof(mainContext))]
     partial class MainContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

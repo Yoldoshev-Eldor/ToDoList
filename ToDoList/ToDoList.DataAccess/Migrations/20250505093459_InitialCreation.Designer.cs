@@ -11,7 +11,7 @@ using ToDoList.DataAccess;
 
 namespace ToDoList.DataAccess.Migrations
 {
-    [DbContext(typeof(MainContext))]
+    [DbContext(typeof(mainContext))]
     [Migration("20250505093459_InitialCreation")]
     partial class InitialCreation
     {
