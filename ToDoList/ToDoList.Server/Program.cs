@@ -1,4 +1,6 @@
 
+using ToDoList.Server.Configurations;
+
 namespace ToDoList.Server
 {
     public class Program
@@ -13,7 +15,7 @@ namespace ToDoList.Server
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-
+            builder.ConfigureDatabase();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
