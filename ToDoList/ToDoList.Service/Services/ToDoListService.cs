@@ -13,16 +13,17 @@ public class ToDoListService : IToDoListService
     private readonly IValidator<ToDoItemUpdateDto> _toDoItemUpdateDtoValidator;
     private readonly IMapper _mapper;
 
-    public ToDoListService(IToDoListRepository repository, IValidator<ToDoItemCreatDto> toDoItemCreateDtoValidator)
+    public ToDoListService(IToDoListRepository repository, IValidator<ToDoItemCreatDto> toDoItemCreateDtoValidator, IMapper mapper)
     {
         _repository = repository;
         _toDoItemCreateDtoValidator = toDoItemCreateDtoValidator;
+        _mapper = mapper;
     }
 
     public async Task<long> AddToDoItemAsync(ToDoItemCreatDto toDoItem)
     {
         var resultValidation = _toDoItemCreateDtoValidator.Validate(toDoItem);
-        if (resultValidation.IsValid)
+        if (!resultValidation.IsValid)
         {
             throw new Exception("Validation is invalid");
         }

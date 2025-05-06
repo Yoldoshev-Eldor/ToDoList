@@ -1,5 +1,6 @@
 
 using ToDoList.Server.Configurations;
+using ToDoList.Service.Services;
 
 namespace ToDoList.Server
 {
@@ -15,7 +16,11 @@ namespace ToDoList.Server
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Configure();
             builder.ConfigureDatabase();
+
+            builder.Services.AddScoped<IToDoListService, ToDoListService>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
