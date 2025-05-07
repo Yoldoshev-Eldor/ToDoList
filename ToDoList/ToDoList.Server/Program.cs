@@ -1,5 +1,7 @@
 
 using ToDoList.Server.Configurations;
+using ToDoList.Server.Filters;
+using ToDoList.Server.Middlewares;
 using ToDoList.Service.Services;
 
 namespace ToDoList.Server
@@ -12,16 +14,40 @@ namespace ToDoList.Server
 
             // Add services to the container.
 
-            builder.Services.AddControllers();
+            builder.ConfigureSerilog();
+
+            builder.Services.AddControllers(options =>
+            {
+                options.Filters.Add<ApiExceptionFilterAttribute>();
+                options.Filters.Add<ToDoListCountHeaderFilter>();
+            });
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Configure();
             builder.ConfigureDatabase();
 
-            builder.Services.AddScoped<IToDoListService, ToDoListService>();
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll", policy =>
+                {
+                    policy.AllowAnyOrigin()
+                          .AllowAnyMethod()
+                          .AllowAnyHeader();
+                });
+            });
+
 
             var app = builder.Build();
+
+            app.UseMiddleware<RequestDurationMiddleware>();
+
+            //app.Use(async (context, next) =>
+            //{
+
+            //    await next();
+            //});
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
@@ -33,6 +59,8 @@ namespace ToDoList.Server
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
+
+            app.UseCors("AllowAll");
 
 
             app.MapControllers();
