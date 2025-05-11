@@ -1,0 +1,137 @@
+2025-05-08 22:34:41.151 +05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-05-08 22:34:41.324 +05:00 [DBG] Hosting starting
+2025-05-08 22:34:41.346 +05:00 [DBG] Middleware loaded
+2025-05-08 22:34:41.349 +05:00 [DBG] Middleware loaded. Script /_framework/aspnetcore-browser-refresh.js (16515 B).
+2025-05-08 22:34:41.351 +05:00 [DBG] Middleware loaded. Script /_framework/blazor-hotreload.js (799 B).
+2025-05-08 22:34:41.529 +05:00 [DBG] Middleware loaded: DOTNET_MODIFIABLE_ASSEMBLIES=debug, __ASPNETCORE_BROWSER_TOOLS=true
+2025-05-08 22:34:41.697 +05:00 [DBG] Connection id "0HNCEAQENNR59" received FIN.
+2025-05-08 22:34:41.718 +05:00 [DBG] Connection id "0HNCEAQENNR59" accepted.
+2025-05-08 22:34:41.740 +05:00 [DBG] Connection id "0HNCEAQENNR59" started.
+2025-05-08 22:34:41.746 +05:00 [INF] Now listening on: https://localhost:7015
+2025-05-08 22:34:41.747 +05:00 [INF] Now listening on: http://localhost:5215
+2025-05-08 22:34:41.747 +05:00 [DBG] Loaded hosting startup assembly ToDoList.Server
+2025-05-08 22:34:41.748 +05:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-05-08 22:34:41.748 +05:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-05-08 22:34:41.748 +05:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-05-08 22:34:41.771 +05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-05-08 22:34:41.795 +05:00 [DBG] Connection id "0HNCEAQENNR59" stopped.
+2025-05-08 22:34:41.810 +05:00 [DBG] Connection id "0HNCEAQENNR59" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-05-08 22:34:42.147 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-08 22:34:42.147 +05:00 [INF] Hosting environment: Development
+2025-05-08 22:34:42.147 +05:00 [INF] Content root path: D:\Projects\TeamProj\ToDoList\ToDoList.Server
+2025-05-08 22:34:42.148 +05:00 [DBG] Hosting started
+2025-05-08 22:34:42.316 +05:00 [DBG] Connection id "0HNCEAQENNR5A" accepted.
+2025-05-08 22:34:42.409 +05:00 [DBG] Connection id "0HNCEAQENNR5A" started.
+2025-05-08 22:34:42.601 +05:00 [DBG] Connection 0HNCEAQENNR5A established using the following protocol: "Tls12"
+2025-05-08 22:34:42.763 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7015/swagger/index.html - null null
+2025-05-08 22:34:43.148 +05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-05-08 22:34:43.210 +05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2025-05-08 22:34:43.211 +05:00 [DBG] Request did not match any endpoints
+2025-05-08 22:34:43.397 +05:00 [DBG] Response markup is scheduled to include Browser Link script injection.
+2025-05-08 22:34:43.400 +05:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2025-05-08 22:34:43.621 +05:00 [INF] Request to /swagger/index.html took 0.359 seconds with status code 200
+2025-05-08 22:34:43.625 +05:00 [DBG] Response markup was updated to include Browser Link script injection.
+2025-05-08 22:34:43.627 +05:00 [DBG] Response markup was updated to include browser refresh script injection.
+2025-05-08 22:34:43.634 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7015/swagger/index.html - 200 null text/html;charset=utf-8 888.2933ms
+2025-05-08 22:34:43.647 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7015/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-08 22:34:43.648 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7015/_vs/browserLink - null null
+2025-05-08 22:34:43.694 +05:00 [DBG] Script injected: /_framework/aspnetcore-browser-refresh.js
+2025-05-08 22:34:43.705 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7015/_framework/aspnetcore-browser-refresh.js - 200 16515 application/javascript; charset=utf-8 58.2671ms
+2025-05-08 22:34:43.913 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7015/_vs/browserLink - 200 null text/javascript; charset=UTF-8 264.9209ms
+2025-05-08 22:34:44.142 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7015/swagger/v1/swagger.json - null null
+2025-05-08 22:34:44.142 +05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2025-05-08 22:34:44.142 +05:00 [DBG] Request did not match any endpoints
+2025-05-08 22:34:44.333 +05:00 [INF] Request to /swagger/v1/swagger.json took 0.182 seconds with status code 200
+2025-05-08 22:34:44.333 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7015/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 191.5607ms
+2025-05-08 22:34:51.873 +05:00 [DBG] Connection id "0HNCEAQENNR5A" received FIN.
+2025-05-08 22:34:51.877 +05:00 [DBG] The connection queue processing loop for 0HNCEAQENNR5A completed.
+2025-05-08 22:34:51.881 +05:00 [DBG] Connection id "0HNCEAQENNR5A" is closed. The last processed stream ID was 7.
+2025-05-08 22:34:51.882 +05:00 [DBG] Connection id "0HNCEAQENNR5A" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-05-08 22:34:51.887 +05:00 [DBG] Connection id "0HNCEAQENNR5A" stopped.
+2025-05-08 22:34:51.992 +05:00 [DBG] Connection id "0HNCEAQENNR5B" accepted.
+2025-05-08 22:34:51.992 +05:00 [DBG] Connection id "0HNCEAQENNR5B" started.
+2025-05-08 22:34:51.996 +05:00 [DBG] Connection 0HNCEAQENNR5B established using the following protocol: "Tls12"
+2025-05-08 22:34:51.998 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7015/api/ToDoItem/add - application/json 91
+2025-05-08 22:34:52.009 +05:00 [DBG] 1 candidate(s) found for the request path '/api/ToDoItem/add'
+2025-05-08 22:34:52.021 +05:00 [DBG] Endpoint 'ToDoList.Server.Controllers.ToDoItemController.Add (ToDoList.Server)' with route pattern 'api/ToDoItem/add' is valid for the request path '/api/ToDoItem/add'
+2025-05-08 22:34:52.022 +05:00 [DBG] Request matched endpoint 'ToDoList.Server.Controllers.ToDoItemController.Add (ToDoList.Server)'
+2025-05-08 22:34:52.027 +05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-05-08 22:34:52.030 +05:00 [DBG] The request has an origin header: 'https://localhost:7015'.
+2025-05-08 22:34:52.030 +05:00 [INF] CORS policy execution successful.
+2025-05-08 22:34:52.032 +05:00 [INF] Executing endpoint 'ToDoList.Server.Controllers.ToDoItemController.Add (ToDoList.Server)'
+2025-05-08 22:34:52.286 +05:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2025-05-08 22:34:52.490 +05:00 [INF] Route matched with {action = "Add", controller = "ToDoItem"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Int64] Add(ToDoList.Service.Dtos.ToDoItemCreatDto) on controller ToDoList.Server.Controllers.ToDoItemController (ToDoList.Server).
+2025-05-08 22:34:52.492 +05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-05-08 22:34:52.492 +05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-05-08 22:34:52.493 +05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-05-08 22:34:52.493 +05:00 [DBG] Execution plan of exception filters (in the following order): ["ToDoList.Server.Filters.ApiExceptionFilterAttribute (Order: 0)"]
+2025-05-08 22:34:52.494 +05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)","ToDoList.Server.Filters.ToDoListCountHeaderFilter"]
+2025-05-08 22:34:52.496 +05:00 [DBG] Executing controller factory for controller ToDoList.Server.Controllers.ToDoItemController (ToDoList.Server)
+2025-05-08 22:34:52.497 +05:00 [DBG] Executed controller factory for controller ToDoList.Server.Controllers.ToDoItemController (ToDoList.Server)
+2025-05-08 22:34:52.519 +05:00 [DBG] Attempting to bind parameter 'toDoItemCreatDto' of type 'ToDoList.Service.Dtos.ToDoItemCreatDto' ...
+2025-05-08 22:34:52.523 +05:00 [DBG] Attempting to bind parameter 'toDoItemCreatDto' of type 'ToDoList.Service.Dtos.ToDoItemCreatDto' using the name '' in request data ...
+2025-05-08 22:34:52.525 +05:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-05-08 22:34:52.540 +05:00 [DBG] Connection id "0HNCEAQENNR5B", Request id "0HNCEAQENNR5B:00000001": started reading request body.
+2025-05-08 22:34:52.541 +05:00 [DBG] Connection id "0HNCEAQENNR5B", Request id "0HNCEAQENNR5B:00000001": done reading request body.
+2025-05-08 22:34:52.563 +05:00 [DBG] JSON input formatter succeeded, deserializing to type 'ToDoList.Service.Dtos.ToDoItemCreatDto'
+2025-05-08 22:34:52.564 +05:00 [DBG] Done attempting to bind parameter 'toDoItemCreatDto' of type 'ToDoList.Service.Dtos.ToDoItemCreatDto'.
+2025-05-08 22:34:52.564 +05:00 [DBG] Done attempting to bind parameter 'toDoItemCreatDto' of type 'ToDoList.Service.Dtos.ToDoItemCreatDto'.
+2025-05-08 22:34:52.564 +05:00 [DBG] Attempting to validate the bound parameter 'toDoItemCreatDto' of type 'ToDoList.Service.Dtos.ToDoItemCreatDto' ...
+2025-05-08 22:34:52.577 +05:00 [DBG] Done attempting to validate the bound parameter 'toDoItemCreatDto' of type 'ToDoList.Service.Dtos.ToDoItemCreatDto'.
+2025-05-08 22:34:52.581 +05:00 [INF] Add Method worked
+2025-05-08 22:34:53.409 +05:00 [DBG] Entity Framework Core 9.0.4 initialized 'MainContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:9.0.4' with options: EngineType=SqlServer 
+2025-05-08 22:34:53.494 +05:00 [DBG] 'MainContext' generated a temporary value for the property 'ToDoItem.Id'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-05-08 22:34:53.589 +05:00 [DBG] Context 'MainContext' started tracking 'ToDoItem' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-05-08 22:34:53.596 +05:00 [DBG] SaveChanges starting for 'MainContext'.
+2025-05-08 22:34:53.599 +05:00 [DBG] DetectChanges starting for 'MainContext'.
+2025-05-08 22:34:53.617 +05:00 [DBG] DetectChanges completed for 'MainContext'.
+2025-05-08 22:34:53.806 +05:00 [DBG] Creating DbConnection.
+2025-05-08 22:34:53.812 +05:00 [DBG] Created DbConnection. (7ms).
+2025-05-08 22:34:53.816 +05:00 [DBG] Opening connection to database 'ToDoListWithTeamm' on server 'DESKTOP-40PGLKA'.
+2025-05-08 22:34:53.841 +05:00 [DBG] Opened connection to database 'ToDoListWithTeamm' on server 'DESKTOP-40PGLKA'.
+2025-05-08 22:34:53.857 +05:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2025-05-08 22:34:53.860 +05:00 [DBG] Created DbCommand for 'ExecuteReader' (5ms).
+2025-05-08 22:34:53.869 +05:00 [DBG] Initialized DbCommand for 'ExecuteReader' (14ms).
+2025-05-08 22:34:53.882 +05:00 [DBG] Executing DbCommand [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 251), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [ToDoItems] ([CreatedAt], [Description], [DueDate], [IsCompleted], [Title])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-05-08 22:34:54.032 +05:00 [INF] Executed DbCommand (147ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 251), @p2='?' (DbType = DateTime2), @p3='?' (DbType = Boolean), @p4='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [ToDoItems] ([CreatedAt], [Description], [DueDate], [IsCompleted], [Title])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-05-08 22:34:54.072 +05:00 [DBG] The foreign key property 'ToDoItem.Id' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2025-05-08 22:34:54.087 +05:00 [DBG] Closing data reader to 'ToDoListWithTeamm' on server 'DESKTOP-40PGLKA'.
+2025-05-08 22:34:54.099 +05:00 [DBG] A data reader for 'ToDoListWithTeamm' on server 'DESKTOP-40PGLKA' is being disposed after spending 57ms reading results.
+2025-05-08 22:34:54.106 +05:00 [DBG] Closing connection to database 'ToDoListWithTeamm' on server 'DESKTOP-40PGLKA'.
+2025-05-08 22:34:54.108 +05:00 [DBG] Closed connection to database 'ToDoListWithTeamm' on server 'DESKTOP-40PGLKA' (1ms).
+2025-05-08 22:34:54.125 +05:00 [DBG] An entity of type 'ToDoItem' tracked by 'MainContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2025-05-08 22:34:54.127 +05:00 [DBG] SaveChanges completed for 'MainContext' with 1 entities written to the database.
+2025-05-08 22:34:54.134 +05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-05-08 22:34:54.139 +05:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2025-05-08 22:34:54.140 +05:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2025-05-08 22:34:54.141 +05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-05-08 22:34:54.141 +05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-05-08 22:34:54.142 +05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-05-08 22:34:54.143 +05:00 [INF] Executing ObjectResult, writing value of type 'System.Int64'.
+2025-05-08 22:34:54.156 +05:00 [INF] Executed action ToDoList.Server.Controllers.ToDoItemController.Add (ToDoList.Server) in 1654.994ms
+2025-05-08 22:34:54.157 +05:00 [INF] Executed endpoint 'ToDoList.Server.Controllers.ToDoItemController.Add (ToDoList.Server)'
+2025-05-08 22:34:54.158 +05:00 [INF] Request to /api/ToDoItem/add took 2.132 seconds with status code 200
+2025-05-08 22:34:54.162 +05:00 [DBG] 'MainContext' disposed.
+2025-05-08 22:34:54.171 +05:00 [DBG] Disposing connection to database 'ToDoListWithTeamm' on server 'DESKTOP-40PGLKA'.
+2025-05-08 22:34:54.172 +05:00 [DBG] Disposed connection to database '' on server '' (4ms).
+2025-05-08 22:34:54.173 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7015/api/ToDoItem/add - 200 null application/json; charset=utf-8 2174.8879ms
+2025-05-08 22:35:01.880 +05:00 [DBG] Connection id "0HNCEAQENNR5B" received FIN.
+2025-05-08 22:35:01.881 +05:00 [DBG] Connection id "0HNCEAQENNR5B" is closed. The last processed stream ID was 1.
+2025-05-08 22:35:01.881 +05:00 [DBG] Connection id "0HNCEAQENNR5B" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-05-08 22:35:01.881 +05:00 [DBG] The connection queue processing loop for 0HNCEAQENNR5B completed.
+2025-05-08 22:35:01.882 +05:00 [DBG] Connection id "0HNCEAQENNR5B" stopped.
